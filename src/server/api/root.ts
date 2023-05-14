@@ -1,5 +1,6 @@
 import { createTRPCRouter } from "t3notes/server/api/trpc";
 import { exampleRouter } from "t3notes/server/api/routers/example";
+import { noteRouter } from "./routers/notes";
 
 /**
  * This is the primary router for your server.
@@ -8,6 +9,7 @@ import { exampleRouter } from "t3notes/server/api/routers/example";
  */
 export const appRouter = createTRPCRouter({
   example: exampleRouter,
+  notes: noteRouter
 });
 
 // export type definition of API
